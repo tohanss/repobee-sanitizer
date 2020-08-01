@@ -151,7 +151,7 @@ class TestSanitizeRepo:
         self, sanitizer_config, fake_repo
     ):
         """Test sanitize-repo when there are ISO8859 files in the repo. This is to
-        ensure that we sanitize using ISO8859 and not utf8 for example.
+        ensure that we can sanitize using ISO8859 without errors.
         """
         file_src_path = testhelpers.get_resource("iso8859-1-encoded-file.txt")
         file_dst_path = fake_repo.path / file_src_path.name
